@@ -3,6 +3,18 @@
     <head>
         <title>ORAA Hanger Information System</title>
 <style>
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#mainContent {
+    height: 100%;
+    width: 100%;
+}
+
 #map {
     height: calc(100% - 100px);
     width:  100%;
@@ -13,7 +25,7 @@
         const ogdenAirport = { lat: 41.19330, lng: -112.00926 };
 
         const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 14,
+            zoom: 16,
             center: ogdenAirport,
         });
 
@@ -42,7 +54,7 @@
         var contentString = '';
 
         for (var i = 0; i < hangers.length; i++) {
-            contentString += '<div id="test' + i + ">' +
+            contentString = contentString + '<div id="test' + i + '" class="hanger">' +
             '<div class="header">' +
             '<h2 class="headerH2">' + hangers[i]['name'] + '</h2>' +
             '</div>' +
@@ -53,11 +65,29 @@
             content: contentString,
         });
 
+        // this code is required to initialize the infoWindow so that the css styles will work on it the first time
+        const airportMarker = new google.maps.Marker({
+            position: ogdenAirport,
+            map: map,
+        });
+
+        infoWindow.open({
+            anchor: airportMarker,
+            map,
+            shouldFocus: false,
+        });
+
+        infoWindow.close();
+
+        airportMarker.setMap(null);
+
         for (var j = 0; j < hangers.length; j++) {
             const marker = new google.maps.Marker({
-                position: { lat: hangers[i]['lat'], lng: hangers[i]['lng'] },
+                position: { lat: hangers[j]['lat'], lng: hangers[j]['lng'] },
                 map: map,
             });
+
+            const jConst = j;
 
             marker.addListener("click", () => {
                 infoWindow.open({
@@ -65,6 +95,18 @@
                     map,
                     shouldFocus: false,
                 });
+
+                changeCSS();
+
+                function changeCSS() {
+                    for (var k = 0; k < hangers.length; k++) {
+                        if (k == jConst) {
+                            document.getElementById('test' + k).style.display = "block";
+                        } else {
+                            document.getElementById('test' + k).style.display = "none";
+                        }
+                    }
+                }
             });
         }
     }
