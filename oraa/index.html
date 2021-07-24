@@ -37,7 +37,7 @@
                     "type": "document",
                     "content": "https://www.google.com"
                 }],
-        }
+        }];
 
         var contentString = '';
 
@@ -53,18 +53,20 @@
             content: contentString,
         });
 
-        const marker = new google.maps.Marker({
-            position: ogdenAirport,
-            map: map,
-        });
-
-        marker.addListener("click", () => {
-            infoWindow.open({
-                anchor: marker,
-                map,
-                shouldFocus: false,
+        for (var j = 0; j < hangers.length; j++) {
+            const marker = new google.maps.Marker({
+                position: { lat: hangers[i]['lat'], lng: hangers[i]['lng'] },
+                map: map,
             });
-        });
+
+            marker.addListener("click", () => {
+                infoWindow.open({
+                    anchor: marker,
+                    map,
+                    shouldFocus: false,
+                });
+            });
+        }
     }
 </script>
     </head>
