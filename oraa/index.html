@@ -4,25 +4,50 @@
         <title>ORAA Hanger Information System</title>
 <style>
 #map {
-    height: 400px;
+    height: calc(100% - 100px);
     width:  100%;
 }
 </style>
 <script>
     function initMap() {
-        const ogdenAirport = { lat: -25.344, lng: 131.036 };
+        const ogdenAirport = { lat: 41.19330, lng: -112.00926 };
 
         const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 4,
+            zoom: 14,
             center: ogdenAirport,
         });
 
-        const contentString = 
-            '<div id="test">' +
+        var hangers = [{
+            "name": "Hanger 1",
+            "lat": 41.19140,
+            "lng": -112.01166,
+            "details": [
+                {
+                    "name": "test doc",
+                    "type": "document",
+                    "content": "https://www.google.com"
+                }],
+        }, {
+            "name": "Hanger 2",
+            "lat": 41.19141,
+            "lng": -112.01189,
+            "details": [
+                {
+                    "name": "test doc",
+                    "type": "document",
+                    "content": "https://www.google.com"
+                }],
+        }
+
+        var contentString = '';
+
+        for (var i = 0; i < hangers.length; i++) {
+            contentString += '<div id="test' + i + ">' +
             '<div class="header">' +
-            '<h2 class="headerH2">Test Div</h2>' +
+            '<h2 class="headerH2">' + hangers[i]['name'] + '</h2>' +
             '</div>' +
             '</div>';
+        }
 
         const infoWindow = new google.maps.InfoWindow({
             content: contentString,
