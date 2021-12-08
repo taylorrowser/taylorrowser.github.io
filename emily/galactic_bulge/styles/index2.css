@@ -1,0 +1,61 @@
+#contentWrapper {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+#planetWrapper {
+    width: 240px;
+    height: 240px;
+    overflow: hidden;
+    position: fixed;
+    bottom: 30px;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+#planetImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.line-1{ 
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+    border-right: 2px solid rgba(255,255,255,.75);
+    color: #CEFA05;
+    font-size: 180%;
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 100%}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+
+#particles-js2 {
+  height: 300px;
+  width: 100%;
+  position: fixed;
+  top: calc(100vh - 300px);
+  left: 0;
+}

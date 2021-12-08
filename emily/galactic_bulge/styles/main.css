@@ -1,0 +1,50 @@
+body {
+  background-color: #111;
+}
+
+#siteWrapper {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #111;
+}
+
+#particles-js {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header {
+  height: 60px;
+  width: 100%;
+  z-index: 5;
+}
+
+#logo {
+  margin-left: 40px;
+  height: 40px;
+  width: 60px;
+}
+
+nav {
+  margin-right: 20px;
+}
+
+.navLinks {
+  margin-right: 10px;
+  font-family: 'Readex Pro', sans-serif;
+  padding: 3px 10px;
+  background-color: #CEFA05;
+  color: #5c6b1a;
+  border: 2px solid #5c6b1a;
+  transition: background-color 0.5s, color 0.5s, border 0.5s;
+}
+
+.navLinks:hover {
+  background-color: #5c6b1a;
+  color: #CEFA05;
+  border: 2px solid #CEFA05;
+}
+
