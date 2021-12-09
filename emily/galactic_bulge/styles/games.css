@@ -129,46 +129,46 @@
     }
 
     #planetHexxedWrapper {
-      height: 24vw;
-      width: 24vw;
-    }
-
-    #hexxedLink {
-      position: absolute;
-      top: 5vh;
-      left: 7vw;
-    }
-
-    #planetPhahooganophWrapper {
-      height: 18vw;
-      width: 18vw;
-    }
-
-    #phahooganophLink {
-      position: absolute;
-      top: 5vh;
-      right: 10vw;
-    }
-
-    #planetLiarWrapper {
-      height: 20vw;
-      width: 20vw;
-    }
-
-    #liarLink {
-      position: absolute;
-      bottom: 5vh;
-      left: 18vw;
-    }
-
-    #planetGreenWrapper {
       height: 22vw;
       width: 22vw;
     }
 
+    #hexxedLink {
+      position: absolute;
+      top: 3vh;
+      left: 7vw;
+    }
+
+    #planetPhahooganophWrapper {
+      height: 16vw;
+      width: 16vw;
+    }
+
+    #phahooganophLink {
+      position: absolute;
+      top: 3vh;
+      right: 10vw;
+    }
+
+    #planetLiarWrapper {
+      height: 16vw;
+      width: 16vw;
+    }
+
+    #liarLink {
+      position: absolute;
+      bottom: 3vh;
+      left: 18vw;
+    }
+
+    #planetGreenWrapper {
+      height: 18vw;
+      width: 18vw;
+    }
+
     #greenLink {
       position: absolute;
-      bottom: 8vh;
+      bottom: 6vh;
       right: 18vw;
     }
   }
