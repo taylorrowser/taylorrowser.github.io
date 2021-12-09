@@ -3,7 +3,7 @@
     <head>
         <title>Galactic Bulge Games</title>
         <link href="styles/main.css" rel="stylesheet" />
-        <link href="styles/index.css" rel="stylesheet" />
+        <link href="styles/games.css" rel="stylesheet" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#111111">
 
@@ -21,7 +21,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
         <script src="js/main.js"></script>
-        <script src="js/index.js"></script>
+        <script src="js/games.js"></script>
     </head>
     <body>
         <div id="particles-js"></div>
@@ -33,19 +33,36 @@
                     <a href="#" class="navLinks">BUY</a>
                 </nav>
             </header>
-            <div id="planetWrapper" class="cell">
-                <img src="img/green-newrender/0001.png" id="planetImage" />
-            </div>
-            <div id="contentWrapper" class="cell grid-y align-middle">
-                <h1 class="line-1 anim-typewriter">try not to cry</h1>
-                <div id="contentPDiv">
-                    <p>...unless, of course your're trying to get your team to guess this emoji &#128557; then crying is probably the right move.</p>
-                    <p>Players will be split into two teams, and will take turns lasting a minute where one of their players will recieve an emoji that he must somehow act out. Once all of their team mates have selected the correct emoji on their screens, the player recieves a point and a new emoji to get their team mates to guess.</p>
-                </div>
-                <div id="contentImgDiv" class="grid-x">
-                    <img src="img/tryNotToCryWireFrame1.png" class="wireframeImages cell small-12 medium-6" />
-                    <img src="img/tryNotToCryWireFrame2.png" class="wireframeImages cell small-12 medium-6" />
-                </div>
+
+            <div id="contentWrapper">
+
+                <h1 class="line-1 anim-typewriter">Pick a planet</h1>
+                <h1 class="line-2 anim-typewriter2">to explore</h1>
+
+                <a href="hexxed.html" id="hexxedLink" class="planetLink">
+                    <div id="planetHexxedWrapper" class="cell">
+                        <img src="img/hexxed-render/0001.png" class="planetImage" />
+                    </div>
+                    <p class="planetTitle">hexxed</p>
+                </a>
+                <a href="phahooganoph.html" id="phahooganophLink" class="planetLink">
+                    <div id="planetPhahooganophWrapper" class="cell">
+                        <img src="img/phahooganoph-render/0001.png" class="planetImage" />
+                    </div>
+                    <p class="planetTitle">phahooganoph</p>
+                </a>
+                <a href="liar.html" id="liarLink" class="planetLink">
+                    <div id="planetLiarWrapper" class="cell">
+                        <img src="img/liar-render/0001.png" class="planetImage" />
+                    </div>
+                    <p class="planetTitle">liar.</p>
+                </a>
+                <a href="cry.html" id="greenLink" class="planetLink">
+                    <div id="planetGreenWrapper" class="cell">
+                        <img src="img/green-newrender/0001.png" class="planetImage" />
+                    </div>
+                    <p class="planetTitle">try not to cry</p>
+                </a>
             </div>
         </div>
         <div id="preloadedImages"></div>
