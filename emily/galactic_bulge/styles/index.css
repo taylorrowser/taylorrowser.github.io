@@ -4,8 +4,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 70vw;
-  width: 70vw;
+  height: 60vw;
+  width: 60vw;
 }
 
 #planetImage {
@@ -20,19 +20,11 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -140%);
+  transform: translate(-50%, -50%);
   width: 70vw;
 }
 
-@media screen and (min-width: 800px) {
-  #planetWrapper {
-    height: 600px;
-    width: 600px;
-  }
-
-  #titleImg {
-    width: 600px;
-  }
+@media screen and (min-width: 1000px) {
   /* #planetWrapper {
     top: unset;
     bottom: 0;
