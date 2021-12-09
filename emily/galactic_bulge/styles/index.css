@@ -24,22 +24,23 @@
   width: 70vw;
 }
 
-@media screen and (min-width: 1000px) {
-  /* #planetWrapper {
-    top: unset;
-    bottom: 0;
-    transform: translateX(-50%);
-    height: 600px;
-    width: 1200px;
-  }
+.exploreLink {
+  margin-right: 10px;
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 24px;
+  padding: 8px 20px;
+  background-color: #CEFA05;
+  color: #5c6b1a;
+  border: 2px solid #5c6b1a;
+  transition: background-color 0.5s, color 0.5s, border 0.5s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% + 14vh));
+}
 
-  #planetImage {
-    height: 1200px;
-    width: 1200px
-  }
-
-  #titleImg {
-    width: 600px;
-    transform: translate(-50%, -50%);
-  } */
+.exploreLink:hover {
+  background-color: #5c6b1a;
+  color: #CEFA05;
+  border: 2px solid #CEFA05;
 }

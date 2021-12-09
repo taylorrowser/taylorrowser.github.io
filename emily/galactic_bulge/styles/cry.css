@@ -35,7 +35,7 @@
 /* Animation */
 .anim-typewriter{
   animation: typewriter 2s steps(15) 1s 1 normal both,
-             blinkTextCursor 1000ms steps(20) infinite normal;
+             blinkTextCursor 1000ms steps(2) infinite normal;
 }
 @keyframes typewriter{
   from{width: 0;}
