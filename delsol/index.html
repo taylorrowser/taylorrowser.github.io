@@ -1,18 +1,46 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <div class="home-wrapper">
     <div class="hero">
         <img id="hero-1" class="hero-img" src="https://cdn11.bigcommerce.com/s-mswkbt68j6/product_images/uploaded_images/mar22-int-womensday-slider-mobile.jpg" data-src-high="https://cdn11.bigcommerce.com/s-mswkbt68j6/product_images/uploaded_images/mar22-int-womensday-slider-small.jpg" alt="International Women's Day - 40% off!" />
     </div>
 
     <div class="category-link-wrapper">
-        <div class="category-link"></div>
-        <div class="category-link"></div>
-        <div class="box-link"></div>
-        <div class="category-link"></div>
-        <div class="category-link"></div>
-        <div class="category-link"></div>
-        <div class="category-link"></div>
+        <a class="category-link">
+            <img id="category-1" class="category-img sun-image" src="https://cdn11.bigcommerce.com/s-mswkbt68j6/product_images/uploaded_images/sunglasses-no-sun.jpg" data-src-sun="https://cdn11.bigcommerce.com/s-mswkbt68j6/product_images/uploaded_images/sunglasses-sun.jpg" alt="Sunglasses category image" />
+            <p class="category-label">Shop Sunglasses</p>
+        </a>
+        <a class="category-link">
+            <img id="category-2" class="category-img sun-image" src="https://cdn11.bigcommerce.com/s-mswkbt68j6/product_images/uploaded_images/nail-polish-no-sun.jpg" data-src-sun="https://cdn11.bigcommerce.com/s-mswkbt68j6/product_images/uploaded_images/nail-polish-sun.jpg" alt="Nail polish category image" />
+            <p class="category-label">Shop Nail Polish</p>
+        </a>
+        <a class="box-link">
+            <img id="box-1" class="box-img" src="https://cdn11.bigcommerce.com/s-mswkbt68j6/product_images/uploaded_images/molecule.jpg" alt="Molecule image" />
+            <p class="box-label">Learn how<br />
+                Del Sol Products<br />
+                Change Color<br />
+                in the Sun</p>
+        </a>
+        <a class="category-link">
+            <img id="category-3" class="category-img sun-image" src="https://cdn11.bigcommerce.com/s-mswkbt68j6/product_images/uploaded_images/water-bottle-no-sun.jpg" data-src-sun="https://cdn11.bigcommerce.com/s-mswkbt68j6/product_images/uploaded_images/water-bottle-sun.jpg" alt="Sunglasses category image" />
+            <p class="category-label">Shop Water Bottles</p>
+        </a>
+        <a class="category-link">
+            <img id="category-4" class="category-img sun-image" src="https://cdn11.bigcommerce.com/s-mswkbt68j6/product_images/uploaded_images/sunglasses-no-sun.jpg" data-src-sun="https://cdn11.bigcommerce.com/s-mswkbt68j6/product_images/uploaded_images/sunglasses-sun.jpg" alt="Sunglasses category image" />
+            <p class="category-label">Shop Apparel</p>
+        </a>
+        <a class="category-link">
+            <img id="category-5" class="category-img sun-image" src="https://cdn11.bigcommerce.com/s-mswkbt68j6/product_images/uploaded_images/sunglasses-no-sun.jpg" data-src-sun="https://cdn11.bigcommerce.com/s-mswkbt68j6/product_images/uploaded_images/sunglasses-sun.jpg" alt="Sunglasses category image" />
+            <p class="category-label">Shop Outdoor</p>
+        </a>
+        <a class="category-link">
+            <img id="category-6" class="category-img sun-image" src="https://cdn11.bigcommerce.com/s-mswkbt68j6/product_images/uploaded_images/sunglasses-no-sun.jpg" data-src-sun="https://cdn11.bigcommerce.com/s-mswkbt68j6/product_images/uploaded_images/sunglasses-sun.jpg" alt="Sunglasses category image" />
+            <p class="category-label">Shop Accessories</p>
+        </a>
     </div>
 </div>
+
+<div style="width: 100%; height: 800px;"></div>
 
 <style>
     html, body {
@@ -21,13 +49,17 @@
     }
 
     .hero {
-        padding: 5px 10px;
-        padding-top: 10px;
+        padding: 0 10px;
+        padding-top: calc(10px + 36.5%);
         width: calc(100% - 20px);
+        position: relative;
     }
 
     .hero .hero-img {
-        width: 100%;
+        width: calc(100% - 20px);
+        position: absolute;
+        top: 10px;
+        left: 10px;
     }
 
     .category-link-wrapper {
@@ -40,15 +72,164 @@
 
     .category-link {
         margin: 5px;
-        height: 160px;
+        height: 180px;
         width: calc(50% - 10px);
         background-color: #EFEFEF;
+        display: flex;
+        position: relative;
     }
 
     .box-link {
         margin: 5px;
-        height: 160px;
+        height: 180px;
         width: calc(100% - 10px);
         background-color: #EFEFEF;
+        display: flex;
+        position: relative;
+    }
+
+    .category-img {
+        height: 140px;
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: opacity 1000ms;
+    }
+
+    .category-label {
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .box-img {
+        height: 140px;
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translate(-50%,-50%);
+    }
+
+    .box-label {
+        width: 40%;
+        position: absolute;
+        top: 50%;
+        left: 75%;
+        transform: translate(-50%,-50%);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0;
+    }
+
+    @media only screen and (min-width: 800px) {
+        .category-link {
+            width: calc(25% - 10px);
+        }
+
+        .box-link {
+            width: calc(50% - 10px);
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        .category-link {
+            width: calc(25% - 10px);
+            height: 360px;
+        }
+
+        .box-link {
+            width: calc(50% - 10px);
+            height: 360px;
+        }
+
+        .category-img {
+            height: 280px;
+        }
     }
 </style>
+
+<script>
+var sunImageArray = document.getElementsByClassName("sun-image");
+
+var positionArray = [];
+
+for (var i = 0; i < sunImageArray.length; i++) {
+    const sunImageElement = document.createElement('img');
+    sunImageElement.classList.add('category-img');
+
+    positionArray.push({noSunImage: sunImageArray[i], sunImage: sunImageElement, changed: false});
+}
+
+var waiting = [];
+function throttle (callback, limit, index, postCallback) {
+    if (waiting.length <= index && waiting[index] != undefined) {
+        waiting[index] = false;
+    }
+    if (!waiting[index]) {
+        callback.apply(this, arguments);
+        waiting[index] = true;
+        setTimeout(function () {
+            waiting[index] = false;
+            setTimeout(function () {
+                if (!waiting[index]) {
+                    postCallback.apply(this, arguments);
+                }
+            }, 100);
+        }, limit);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    setTimeout(function () {
+        changeColors();
+    }, 500);
+});
+
+function changeColors() {
+    throttle(() => {
+        for (var i = 0; i < positionArray.length; i++) {
+            if (!positionArray[i].changed && ((position(positionArray[i].noSunImage) - window.scrollY) / window.innerHeight) < 0.7  ) {
+                changeColorsWaiting = true;
+                const sunImage = positionArray[i].sunImage;
+                sunImage.src = positionArray[i].noSunImage.getAttribute('data-src-sun');
+                insertAfter(sunImage, positionArray[i].noSunImage);
+                sunImage.style.opacity = 0;
+                setTimeout(function() {
+                    sunImage.style.opacity = 1;
+                }, 50)
+                positionArray[i].changed = true;
+                i = positionArray.length;
+                setTimeout(function() {
+                    changeColors();
+                }, 550);
+            }
+        }
+    }, 500, 0, () => {});
+}
+
+window.onscroll = function (e) {
+    throttle(() => {
+        changeColors();
+    }, 100, 1, () => {})
+}
+
+function insertAfter(newNode, existingNode) {
+    existingNode.parentNode.insertBefore(newNode, existingNode.nextSibling);
+}
+
+function position(elem) {
+    var top = 0;
+
+    do {
+        top += elem.offsetTop;
+    } while ( elem = elem.offsetParent );
+
+    return top;
+}
+</script>
